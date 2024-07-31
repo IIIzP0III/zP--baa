@@ -1,4 +1,5 @@
-package solarsystem.coffee.utilz;
+package coffee.solarsystem.utilz;
+
 import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ public class C {
         List<String> color = new ArrayList();
         Iterator var2 = lore.iterator();
 
-        while(var2.hasNext()) {
-            String s = (String)var2.next();
+        while (var2.hasNext()) {
+            String s = (String) var2.next();
             color.add(color(s));
         }
 
