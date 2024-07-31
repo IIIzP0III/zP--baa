@@ -49,7 +49,8 @@ public class zPbaa extends JavaPlugin {
                 if (Target != null) {
                     Target.sendMessage(
                             C.color("&6&l" + player.getName() + "&6 sent you: " + "&6&l✂ Baaaaaaaaaaaa ✂ "));
-                    Target.playSound(Target.getLocation(), Sound.ENTITY_SHEEP_AMBIENT, (float) 40.0, (float) 18.0);
+                    Target.playSound(Target.getLocation(), Sound.BLOCK_AMETHYST_BLOCK_BREAK, (float) 40, (float) 18);
+                    //Target.playSound(Target.getLocation(), Sound.ENTITY_SHEEP_AMBIENT, (float) 40.0, (float) 18.0);
                     player.sendMessage(
                             C.color("&6&l| &6&l✂ Baaaa ✂ &4&l| &6&l" + Target.getName() + " &6&l <3 &6&l| "));
                 } else {
