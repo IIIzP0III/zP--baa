@@ -2,7 +2,6 @@ package coffee.solarsystem;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Server;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,8 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import coffee.solarsystem.utilz.C;
 
 public class zPbaa extends JavaPlugin {
-
-    Player player;;
+    Player player;
 
     @Override
     public void onEnable() {
@@ -21,16 +19,12 @@ public class zPbaa extends JavaPlugin {
 
     @Override
     public void onDisable() {
-
         Bukkit.getServer().getConsoleSender().sendMessage("zPbaa disabled");
     }
 
     @Override
     public boolean onCommand(CommandSender interpreter, Command cmd, String input, String[] args) {
-
         player = (Player) interpreter;
-        Server server = interpreter.getServer();
-        String serverName = server.getName();
 
         if (interpreter instanceof Player) {
 
@@ -53,7 +47,8 @@ public class zPbaa extends JavaPlugin {
 
                 // Execute Boop
                 if (Target != null) {
-                    Target.sendMessage(C.color("&6&l" + player.getName() + "&6 send you " + "&6&l✂ Baaaaaaaaaaaa ✂ "));
+                    Target.sendMessage(
+                            C.color("&6&l" + player.getName() + "&6 sent you: " + "&6&l✂ Baaaaaaaaaaaa ✂ "));
                     Target.playSound(Target.getLocation(), Sound.ENTITY_SHEEP_AMBIENT, (float) 40.0, (float) 18.0);
                     player.sendMessage(
                             C.color("&6&l| &6&l✂ Baaaa ✂ &4&l| &6&l" + Target.getName() + " &6&l <3 &6&l| "));
